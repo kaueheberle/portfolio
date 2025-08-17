@@ -4,9 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio | Projetos</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="stylesheet" href="./assets/styles/projetosStyles.css">
 </head>
 <body>
-    <h1>1</h1>
+    <div class="projects-container">
+        <div class="page-header">
+            <h1 class="page-title">Meus Projetos</h1>
+            <p class="page-subtitle">Conheça alguns dos projetos que desenvolvi</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Projeto 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">📄</div>
+                    <div>
+                        <h3 class="project-title">Site Institucional para Academia</h3>
+                        <span class="project-status status-completed">Concluído</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Desenvolvimento de website responsivo com design moderno e clean, voltado para apresentação da academia, planos e horários. Inclui páginas de informações, seção de contato integrada e navegação intuitiva. Construído com HTML5, CSS3 e JavaScript, seguindo boas práticas de UI/UX.
+                </p>
+                <div class="project-technologies">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Responsive Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://academiatop10.vercel.app/" class="project-link">
+                        <span>🔗</span> Ver Projeto
+                    </a>
+                    <a href="https://github.com/kaueheberle/siteAcademia" class="project-link">
+                        <span>📦</span> Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projeto em Desenvolvimento -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">💻</div>
+                    <div>
+                        <h3 class="project-title">Sistema de Gerenciamento</h3>
+                        <span class="project-status status-in-progress">Em Desenvolvimento</span>
+                    </div>
+                </div>
+                <p class="project-description">
+                    Aplicação web para gerenciamento de dados com interface intuitiva e funcionalidades avançadas. 
+                    Projeto em desenvolvimento como parte dos estudos acadêmicos.
+                </p>
+                <div class="project-technologies">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                    <span class="tech-tag">Database</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link">
+                        <span>🚧</span> Em Breve
+                    </a>
+                </div>
+            </div>
+
+            <!-- Próximos Projetos -->
+            <div class="coming-soon">
+                <div class="coming-soon-icon">🚀</div>
+                <div class="coming-soon-text">Mais projetos em desenvolvimento</div>
+                <div class="coming-soon-subtitle">
+                    Acompanhe meu GitHub para ver as próximas atualizações!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegação Inferior -->
+    <div class="bottom-nav">
+        <div class="nav-items">
+            <a href="#" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Início</div>
+            </a>
+            <a href="#" class="nav-item active">
+                <div class="nav-icon">💻</div>
+                <div class="nav-label">Projetos</div>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="nav-icon">📞</div>
+                <div class="nav-label">Contato</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

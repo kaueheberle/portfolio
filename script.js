@@ -14,14 +14,35 @@ function initNavigation() {
         item.addEventListener('click', function(e) {
             e.preventDefault();
             
+            // Remover classe active de todos os itens
             navItems.forEach(nav => nav.classList.remove('active'));
             
+            // Adicionar classe active ao item clicado
             this.classList.add('active');
             
+            // Efeito visual de clique
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 150);
+            
+            // Navegação entre páginas
+            const navLabel = this.querySelector('.nav-label').textContent;
+            
+            switch(navLabel) {
+                case 'Início':
+                    if (window.location.pathname !== '/index.html' && !window.location.pathname.endsWith('/')) {
+                        window.location.href = 'index.html';
+                    }
+                    break;
+                case 'Projetos':
+                    window.location.href = 'projetos.html';
+                    break;
+                case 'Contato':
+                    // Por enquanto, mostrar mensagem de contato
+                    showContactMessage();
+                    break;
+            }
         });
     });
 }
@@ -51,22 +72,24 @@ function initCardAnimations() {
     cards.forEach(card => observer.observe(card));
 }
 
-
 function initCTAButton() {
     const ctaButton = document.querySelector('.cta-button');
     
     if (ctaButton) {
         ctaButton.addEventListener('click', function(e) {
-            e.preventDefault();
+            // NÃO usar e.preventDefault() para permitir o redirecionamento
             
+            // Efeito visual de clique
             this.style.transform = 'scale(0.95)';
             
             setTimeout(() => {
                 this.style.transform = 'translateY(-2px)';
             }, 150);
             
-           
+            // Mostrar mensagem de feedback (opcional)
             showContactMessage();
+            
+            // O link será seguido automaticamente após o efeito visual
         });
     }
 }
@@ -111,9 +134,8 @@ function showContactMessage() {
         box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
     `;
     
-    toast.textContent = 'Entre em contato! 📧';
+    toast.textContent = 'Carregando...';
     document.body.appendChild(toast);
-    
     
     setTimeout(() => {
         toast.style.animation = 'slideUp 0.3s ease';
@@ -122,7 +144,6 @@ function showContactMessage() {
         }, 300);
     }, 3000);
 }
-
 
 function addDynamicStyles() {
     const style = document.createElement('style');

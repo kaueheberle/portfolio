@@ -1,3 +1,201 @@
-h1 {
-    color: yellow;
+.projects-container {
+    margin: 20px 15px 100px 15px;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #1B263B, #0D1B2A);
+    margin-bottom: 30px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(76, 201, 240, 0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.page-subtitle {
+    font-size: 16px;
+    color: #4CC9F0;
+    position: relative;
+    z-index: 2;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+}
+
+.project-card {
+    background: #1B263B;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #4CC9F0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(76, 201, 240, 0.2);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #48CAE4, #4CC9F0);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+    box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.project-status {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-completed {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-in-progress {
+    background: rgba(255, 193, 7, 0.2);
+    color: #FFC107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.project-description {
+    color: #B8B8B8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: rgba(76, 201, 240, 0.1);
+    color: #4CC9F0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.2), rgba(72, 202, 228, 0.1));
+    color: #4CC9F0;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(76, 201, 240, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-link:hover {
+    background: linear-gradient(135deg, rgba(76, 201, 240, 0.3), rgba(72, 202, 228, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 201, 240, 0.2);
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(76, 201, 240, 0.05);
+    border-radius: 20px;
+    border: 2px dashed rgba(76, 201, 240, 0.3);
+}
+
+.coming-soon-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+.coming-soon-text {
+    color: #4CC9F0;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.coming-soon-subtitle {
+    color: #B8B8B8;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+@media (max-width: 320px) {
+    .projects-container {
+        margin: 15px 10px 85px 10px;
+    }
+    
+    .project-card {
+        padding: 20px;
+    }
 }
