@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Portfólio Digital</title>
+    <link rel="stylesheet" href="./assets/styles/contato.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">
+                <img src="./assets/images/arrowLeft.png" alt="Voltar" class="back-icon">
+                Voltar
+            </a>
+            <h1 class="page-title">Entre em Contato</h1>
+            <p class="page-subtitle">Vamos conversar sobre projetos e oportunidades!</p>
+        </div>
+    </header>
+
+    <main class="contact-container">
+        
+        <div class="contact-card">
+            <h2 class="contact-title">Informações de Contato</h2>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="./assets/images/zap.png" alt="Telefone" class="contact-icon-img">
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">Telefone</h3>
+                    <a href="http://wa.me/48935053335" class="contact-value">+55 (48) 93505-3335</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="./assets/images/emailwhite.png" alt="E-mail" class="contact-icon-img">
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">E-mail</h3>
+                    <a href="mailto:kauaheberle.business@gmail.com" class="contact-value">kauaheberle.business@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="./assets/images/LinkedIn_logo_initials.png" alt="LinkedIn" class="contact-icon-img">
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">Linkedin</h3>
+                    <a href="https://linkedin.com/in/kaue-heberle" target="_blank" class="contact-value">linkedin.com/in/kaue-heberle</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="./assets/images/githubwhite.png" alt="GitHub" class="contact-icon-img">
+                </div>
+                <div class="contact-info">
+                    <h3 class="contact-label">GitHub</h3>
+                    <a href="https://github.com/kaueheberle" target="_blank" class="contact-value">github.com/kaueheberle</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-card">
+            <h2 class="cta-title">Pronto para começar?</h2>
+            <p class="cta-description">
+                Estou sempre aberto a novos desafios e oportunidades. 
+                Entre em contato e vamos criar algo incrível juntos!
+            </p>
+            <div class="cta-buttons">
+                <a href="http://wa.me/48935053335" class="cta-btn primary">
+                    <img src="./assets/images/zap.png" alt="" class="btn-icon">
+                    Enviar mensagem
+                </a>
+                <a href="mailto:kauaheberle.business@gmail.com" class="cta-btn secondary">
+                    <img src="./assets/images/emailwhite.png" alt="" class="btn-icon">
+                    Enviar E-mail
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="bottom-nav">
+        <div class="nav-items">
+            <a href="index.html" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <div class="nav-label">Início</div>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="nav-icon">💻</div>
+                <div class="nav-label">Projetos</div>
+            </a>
+            <a href="contato.html" class="nav-item active">
+                <div class="nav-icon">📞</div>
+                <div class="nav-label">Contato</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Animação de entrada dos cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.contact-card, .cta-card');
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.animationDelay = `${index * 0.2}s`;
+                card.style.animation = 'fadeInUp 0.6s ease forwards';
+            });
+
+            // Navegação
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

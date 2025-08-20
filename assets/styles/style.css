@@ -151,7 +151,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Botão CTA */
 .cta-button {
     background: linear-gradient(135deg, #48CAE4, #0077B6);
     color: #FFFFFF;
@@ -190,7 +189,6 @@ body {
     text-align: center;
 }
 
-/* Seção de Formação */
 .education-item {
     display: flex;
     align-items: center;
@@ -237,7 +235,6 @@ body {
     font-size: 14px;
 }
 
-/* Seção de Skills */
 .skills-grid {
     display: flex;
     justify-content: space-around;
@@ -296,8 +293,6 @@ body {
     margin-top: 5px;
 }
 
-
-/* Navegação inferior */
 .bottom-nav {
     position: fixed;
     bottom: 20px;
@@ -351,7 +346,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Responsividade */
 @media (max-width: 320px) {
     .header-card, .section {
         margin: 15px 10px;

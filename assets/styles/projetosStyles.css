@@ -183,7 +183,6 @@
     font-size: 14px;
 }
 
-/* Responsividade */
 @media (min-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

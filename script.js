@@ -39,8 +39,7 @@ function initNavigation() {
                     window.location.href = 'projetos.html';
                     break;
                 case 'Contato':
-                    // Por enquanto, mostrar mensagem de contato
-                    showContactMessage();
+                    window.location.href = 'contato.html';
                     break;
             }
         });
@@ -77,19 +76,15 @@ function initCTAButton() {
     
     if (ctaButton) {
         ctaButton.addEventListener('click', function(e) {
-            // NÃO usar e.preventDefault() para permitir o redirecionamento
-            
-            // Efeito visual de clique
+
             this.style.transform = 'scale(0.95)';
             
             setTimeout(() => {
                 this.style.transform = 'translateY(-2px)';
             }, 150);
             
-            // Mostrar mensagem de feedback (opcional)
             showContactMessage();
             
-            // O link será seguido automaticamente após o efeito visual
         });
     }
 }
