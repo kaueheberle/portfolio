@@ -119,14 +119,16 @@ body {
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
+    display: block;
+    text-decoration: none;
+    color: inherit;
     margin-bottom: 25px;
     padding: 20px 15px;
     background: rgba(76, 201, 240, 0.05);
     border-radius: 15px;
     border-left: 4px solid #4CC9F0;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .contact-item:last-child {
@@ -137,6 +139,17 @@ body {
     background: rgba(76, 201, 240, 0.1);
     transform: translateX(5px);
     box-shadow: 0 4px 20px rgba(76, 201, 240, 0.2);
+}
+
+.contact-item:active {
+    transform: translateX(3px) scale(0.98);
+    background: rgba(76, 201, 240, 0.15);
+}
+
+.contact-item-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .contact-icon {
@@ -184,11 +197,11 @@ body {
     color: #4CC9F0;
     text-decoration: none;
     transition: all 0.3s ease;
+    pointer-events: auto;
 }
 
-.contact-value:hover {
+.contact-item:hover .contact-value {
     color: #FFFFFF;
-    text-decoration: underline;
 }
 
 .cta-card {
